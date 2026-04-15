@@ -1,6 +1,5 @@
 package com.hng.classify.controller;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,7 +8,6 @@ import com.hng.classify.dto.ClassifyResponse;
 import com.hng.classify.service.GenderizeService;
 
 @RestController
-@CrossOrigin(origins = "*")
 public class ClassifyController {
 
   private final GenderizeService genderizeService;
