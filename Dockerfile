@@ -7,6 +7,9 @@ COPY mvnw .
 COPY .mvn .mvn
 COPY pom.xml .
 
+# Fix permissions for the maven wrapper
+RUN chmod +x ./mvnw
+
 # Download dependencies (this caches them so builds are faster)
 RUN ./mvnw dependency:go-offline -B
 
